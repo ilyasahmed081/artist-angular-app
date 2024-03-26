@@ -7,4 +7,5 @@ export interface IArtist {
     contactInfo: string;
     exhibitionDate: string;
     specialNotes: string;
+    featured: boolean;
 }

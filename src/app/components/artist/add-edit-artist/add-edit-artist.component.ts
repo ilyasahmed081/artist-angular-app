@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ArtistService } from '../../../services/artist/artist.service';
 
 @Component({
   selector: 'app-add-edit-artist',
@@ -14,7 +15,8 @@ export class AddEditArtistComponent {
   addEditArtistForm: any = FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private artistService: ArtistService
   ) { }
 
   ngOnInit(): void {
@@ -33,6 +35,10 @@ export class AddEditArtistComponent {
       specialNotes: ['', Validators.required],
       featured: [false, Validators.required]
     });
+  }
+
+  addArtist() {
+    this.artistService.addArtist(this.addEditArtistForm.value);
   }
 
 }
