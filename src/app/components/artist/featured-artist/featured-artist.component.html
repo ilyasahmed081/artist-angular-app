@@ -1,1 +1,33 @@
-<p>featured-artist works!</p>
+<div class="featured-artist">
+    <div class="container">
+        <h1 class="mt-4">Featured Artists List</h1>
+
+        <hr>
+
+        <div class="d-flex align-items-center mb-4">
+            <div class="flex-grow-1"> <div class="form-group mt-3">
+                    <input type="number" class="form-control" id="searchBox" placeholder="Enter artist ID">
+                </div>
+            </div>
+            <button class="btn btn-info mt-2 ms-3 p-2">Search</button>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body" *ngFor="let artist of artists">
+                        <h5 class="card-title">{{artist.name}}</h5>
+                        <p class="card-text">Date of Birth: {{artist.dob}}</p>
+                        <p class="card-text">Gender: {{artist.gender}}</p>
+                        <p class="card-text">Artwork Type: {{artist.artworkType}}</p>
+                        <p class="card-text">Contact Info: {{artist.contactInfo}}</p>
+                        <p class="card-text">Exhibition Date: {{artist.exhibitionDate}}</p>
+                        <p class="card-text">Special Notes: {{artist.specialNotes}}</p>
+                        <button class="btn btn-danger me-2">Delete</button>
+                        <button class="btn btn-primary">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
