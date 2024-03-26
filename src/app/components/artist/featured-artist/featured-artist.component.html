@@ -5,11 +5,11 @@
         <hr>
 
         <div class="d-flex align-items-center mb-4">
-            <div class="flex-grow-1"> <div class="form-group mt-3">
-                    <input type="number" class="form-control" id="searchBox" placeholder="Enter artist ID">
+            <div class="flex-grow-1">
+                <div class="form-group mt-3">
+                    <input type="text" class="form-control" placeholder="Enter artist ID" (keyup)="onSearch($event)">
                 </div>
             </div>
-            <button class="btn btn-info mt-2 ms-3 p-2">Search</button>
         </div>
 
         <div class="row">
@@ -23,8 +23,8 @@
                         <p class="card-text">Contact Info: {{artist.contactInfo}}</p>
                         <p class="card-text">Exhibition Date: {{artist.exhibitionDate}}</p>
                         <p class="card-text">Special Notes: {{artist.specialNotes}}</p>
-                        <button class="btn btn-danger me-2">Delete</button>
-                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger me-2" (click)="onDelete(artist.id)">Delete</button>
+                        <button class="btn btn-primary" (click)="onEditArtist(artist)">Edit</button>
                     </div>
                 </div>
             </div>
