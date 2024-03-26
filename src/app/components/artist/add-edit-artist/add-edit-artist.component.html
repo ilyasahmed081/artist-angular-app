@@ -1,1 +1,70 @@
-<p>add-edit-artist works!</p>
+<div class="aad-edit-artist">
+    <div class="container">
+        <div class="card my-4">
+            <h5 class="card-header">Add Artist</h5>
+            <div class="card-body">
+                <form class="row"  [formGroup]="addEditArtistForm">
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>ID:</label>
+                        <input type="number" class="form-control" formControlName="id">
+                    </div>
+        
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>Name:</label>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+        
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>Date of Birth:</label>
+                        <input type="date" class="form-control" formControlName="dob">
+                    </div>
+        
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>Gender:</label>
+                        <select class="form-control" formControlName="gender">
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Unspecified">Unspecified</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>Artwork Type:</label>
+                        <select class="form-control" formControlName="artworkType">
+                            <option value="Painting">Painting</option>
+                            <option value="Sculpture">Sculpture</option>
+                            <option value="Photograph">Photograph</option>
+                            <option value="Video Art">Video Art</option>
+                            <option value="Digital Art">Digital Art</option>
+                            <option value="Printmaking">Printmaking</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>Contact Info:</label>
+                        <input type="text" class="form-control" formControlName="contactInfo">
+                    </div>
+        
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>Exhibition Date:</label>
+                        <input type="date" class="form-control" formControlName="exhibitionDate">
+                    </div>
+        
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>Special Notes:</label>
+                        <textarea type="text" class="form-control" formControlName="specialNotes"></textarea>
+                    </div>
+        
+                    <div class="form-group col-md-3 col-12 mb-3">
+                        <label>Featured Artist:</label>
+                        <input type="checkbox" class="form-check-input" formControlName="featured">
+                    </div>
+        
+                    <div class="col-12 mt-2">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
